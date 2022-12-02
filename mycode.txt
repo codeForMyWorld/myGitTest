@@ -1,0 +1,14 @@
+public boolean offer(int val){
+    QueueNode newNode = new QueueNode(val);
+    for(QueueNode t = tail, p = t ;;){
+        QueueNode q = p.next;
+        if(q == null){
+            if(p.casNext(null, newNode)){
+                if(p != t) casTail(t, newNode);
+                return true;
+            }
+        }else{
+            p = (p != t && t != (t = tail)) ? t : q;
+        }
+    }
+}
