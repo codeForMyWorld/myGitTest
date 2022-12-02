@@ -12,5 +12,4 @@ public boolean offer(int val){
         }
     }
 }
-holy shit！！！！！！！！！！！
-oh my god！！！
+oh
